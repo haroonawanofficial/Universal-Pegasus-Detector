@@ -1,6 +1,6 @@
 # 🛡️ Universal Pegasus Detector v4.0
 
-**Detects ALL Pegasus Variants • ANY Device • AI-Powered • Outsmarts MVT**  
+**Detects ALL Pegasus Variants • ANY Device • AI-Powered**  
 **100% Real Code • No Jailbreak Required • Production-Ready**
 
 ---
