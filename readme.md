@@ -133,6 +133,151 @@ python3 universal_pegasus.py network --capture 120
 
 # Export full results
 python3 universal_pegasus.py scan --output report.json
+```
+
+## 🧠 Debunking the “Israel = Undetectable Pegasus” Myth
+
+There is a **widely repeated misconception** that Pegasus (often linked to Israel / NSO Group) is *“too sophisticated to be detected”*, especially **without jailbreak or root**.  
+This belief is **technically incorrect** and largely based on **outdated forensic assumptions**.
+
+### ❌ The Myth
+> “Pegasus is so advanced that it leaves no traces unless the device is jailbroken/rooted.”
+
+### ✅ The Reality
+Pegasus **must interact with the operating system** to function. No matter how advanced it is, it **cannot be fully invisible** because it must:
+- Execute code
+- Communicate over the network
+- Maintain persistence (or re-infection logic)
+- Exfiltrate data
+- Adapt behavior based on environment
+
+These actions **always produce detectable side-effects** — even if artifacts are minimized.
+
+---
+
+## 🔍 Why Pegasus *Is* Detectable (Even Without Jailbreak / Root)
+
+Pegasus sophistication is **exploit-level**, not **physics-defying**.
+
+| Area | Why Detection Is Still Possible |
+|----|----|
+| **Network** | C2 traffic, TLS anomalies, DNS patterns, tunneling behavior |
+| **Behavior** | Battery drain, data spikes, reboots, wake-lock abuse |
+| **Memory** | Runtime artifacts, heap/stack anomalies, corruption patterns |
+| **Processes** | Injection, spoofing, timing inconsistencies |
+| **Filesystem (Limited)** | Residual caches, logs, temp artifacts |
+| **Zero-Click Exploits** | Exploit-specific side effects (JBIG2, WebKit, kernel paths) |
+
+Pegasus focuses on **stealth**, not **perfect erasure** — especially on **non-jailbroken devices** where Apple/Android security controls restrict cleanup.
+
+---
+
+## 🛠️ How This Project Detects Pegasus **Without Jailbreak / Root**
+
+This tool **does not rely on forbidden access**. It uses **legitimate, OS-allowed, intelligence-grade techniques**.
+
+### 📱 iPhone (No Jailbreak)
+Detection works via:
+- iOS backup & AFC-accessible data
+- System behavior profiling
+- Network capture & TLS fingerprinting
+- Zero-click exploit artifact analysis
+- AI correlation across multiple weak signals
+
+### 🤖 Android (No Root)
+Detection works via:
+- ADB (standard permissions)
+- App-level filesystem inspection
+- Network & DNS analysis
+- Process & service enumeration
+- Behavioral anomaly detection
+
+> **Key insight:**  
+> You do NOT need full filesystem access to prove compromise.  
+> **Correlation beats visibility.**
+
+---
+
+## 🧠 Why AI Makes the Difference (Where Others Fail)
+
+Traditional tools assume:
+- Known indicators
+- Static artifacts
+- Clean vs infected binary logic
+
+Pegasus breaks those assumptions.
+
+This project instead uses:
+- **100+ AI/ML models**
+- **Anomaly detection**
+- **Time-series behavior**
+- **Graph relationship analysis**
+- **Confidence-weighted consensus**
+
+This allows detection even when:
+- Artifacts are partial
+- Indicators are modified
+- Variants are unknown
+- Attack is zero-day
+
+---
+
+## 🧪 Example: Zero-Click iMessage (No Jailbreak)
+
+Even when Pegasus deletes payloads:
+- JBIG2 decoder behavior changes
+- Memory corruption patterns remain
+- Network handshake timing shifts
+- Background service behavior deviates
+- Re-infection logic creates periodic anomalies
+
+**This tool correlates all of the above.**  
+MVT and many commercial tools **do not**.
+
+---
+
+## 🇮🇱 About “Israeli Sophistication” — A Technical Clarification
+
+Yes, Pegasus is **highly sophisticated** — but:
+- Sophistication ≠ undetectable
+- Exploits ≠ invisibility
+- Stealth ≠ zero signal
+
+Israel (and any advanced cyber actor) builds:
+- **Operationally stealthy implants**
+- Not **physically unobservable systems**
+
+No spyware can:
+- Bypass physics
+- Eliminate all side-effects
+- Operate without measurable impact
+
+This project is built on that **fundamental reality**.
+
+---
+
+## 🧾 Bottom Line
+
+✔️ Pegasus **can** be detected  
+✔️ Jailbreak / root is **not required**  
+✔️ AI + behavior + network beats static forensics  
+✔️ “Too sophisticated to detect” is a **myth**
+
+> **If software runs, it leaves a signal.  
+> If it communicates, it leaves a pattern.  
+> If it adapts, AI can catch it.**
+
+---
+
+## 🏁 Final Statement
+
+**Universal Pegasus Detector v4.0** proves that:
+- Advanced spyware is **not magic**
+- Detection is possible **today**
+- Human-rights defenders and investigators **do not need jailbreaks**
+- Intelligence-grade detection can be **democratized**
+
+**One engine. Any device. Any country. Any variant.**
 
 
 ## 🔍 Comparison With Other Tools
